@@ -8,7 +8,7 @@ import CodeAnalysisViewer from '@/components/code-analysis/CodeAnalysisViewer';
 import CodeAnalysisEmptyView from '@/components/code-analysis/CodeAnalysisEmptyView';
 
 export default function CodeAnalysisPage() {
-  const sarifUrl = '/full.sarif' as const; // public/full.sarif
+  const sarifUrl = '/full.sarif' as const;
   const loading = false as const;
 
   return (
@@ -33,7 +33,7 @@ export default function CodeAnalysisPage() {
             <p className="text-sm text-gray-400 mb-2">
               파일: <span className="font-mono text-white">{sarifUrl}</span>
             </p>
-            <CodeAnalysisViewer sarifUrl={sarifUrl} />
+            <CodeAnalysisViewer /> {/* ✅ 수정 완료 */}
           </div>
         )}
 
